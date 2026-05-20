@@ -13,9 +13,9 @@
 
     "lint:contracts": "spectral lint contracts/*.yaml --fail-severity error",
 
-    "test:mock": "newman run postman/collections/Access Gate Service API.postman_collection.json -e postman/environments/access-gate_mock.postman_environment.json --reporters cli,junit --reporter-junit-export reports/newman-report-mock.xml",
+    "test:mock": "newman run \"postman/collections/access-gate.postman_collection.json\" -e \"postman/environments/access-gate_mock.postman_environment.json\" --reporters cli,junit --reporter-junit-export reports/newman-report-mock.xml",
 
-    "test:html": "newman run postman/collections/Access Gate Service API.postman_collection.json -e postman/environments/access-gate_mock.postman_environment.json --reporters cli,htmlextra --reporter-htmlextra-export reports/newman-report.html",
+    "test:html": "newman run \"postman/collections/access-gate.postman_collection.json\" -e \"postman/environments/access-gate_mock.postman_environment.json\" --reporters cli,htmlextra --reporter-htmlextra-export reports/newman-report.html",
 
     "test:ci": "npm run lint:contracts && npm run test:mock"
   },
